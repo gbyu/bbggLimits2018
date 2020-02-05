@@ -26,7 +26,7 @@ scramv1 b
 ```
 . run1.sh
 ```
-The goal of this code is to categorize events and make a new tree which *catID* variable, as well as *mgg* and *mjj*. 
+The goal of this code is to categorize events and make a new tree which *catID* variable, as well as *mgg* and *mjj*. By default 2D directory would be produed. But you can go to run1.sh and uncomment 6 1D lines to produce also 2D directory
 
 ### Notes on limit trees
 
@@ -61,7 +61,7 @@ ncat: number of categories. This should much the number of categories produced i
 fitStrategy: 2 - for 2D fit of (mgg, mjj); 1 - for 1D fit of mgg
 ```
 
-The results of the limit will be put at `LIMS_OutDir/Node_SM/result_1.log`.
+The results of the limit will be put at `LIMS_OutDir/Node_SM/result_1.log`. You can uncomment 1D if you want to process it.
 
 
  3. Run the FTest on the workspace ([link](https://github.com/ivovtin/Envelop#ftest))
@@ -87,7 +87,7 @@ The results of the limit will be put at `LIMS_OutDir/Node_SM/result_1.log`.
 . run3.sh
 ```
 
-The process may take a while to complete, especially when running with many categories (about 30 minuts for 2D method and 12 categories).
+The process may take a while to complete, especially when running with many categories (about 30 minuts for 2D method and 12 categories). You can uncomment 1D if you want to process it.
 
 
 
