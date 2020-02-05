@@ -228,8 +228,10 @@ void bbggLTMaker::Init(TTree *tree)
    fChain->SetBranchAddress("CMS_hgg_mass", &CMS_hgg_mass, &b_Mgg);
    fChain->SetBranchAddress("diHiggs_mass", &diHiggs_mass, &b_mbbgg);
    fChain->SetBranchAddress("weight", &weight, &b_evWeight);
+   if(fChain->GetBranch("benchmark_reweight_SM")) {
    fChain->SetBranchAddress("benchmark_reweight_SM", &reweight, &b_reWeight);
    //fChain->SetBranchAddress("benchmark_reweight_2017fake", &reweight, &b_reWeight);
+   }
    fChain->SetBranchAddress("ttHScore", &ttHScore, &b_ttHTagger);
 }
 
