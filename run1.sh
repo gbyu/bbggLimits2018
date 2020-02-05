@@ -1,6 +1,6 @@
 #!/bin/bash/
 
-##./makeLT.py /afs/cern.ch/work/i/ivovtin/public/inDir/ -x nonres -o /afs/cern.ch/work/i/ivovtin/public/outDir -c 2
+##./makeLT.py inDir/ -x nonres -o outDir -c 2
 
 ##Input directory with samples
 indir16="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho_rew_2016_v2/"
@@ -9,7 +9,7 @@ indir18="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho
 
 ##Output directory with Limit Tree (LT) for 1D
 #path=.
-#LT=LT_2D_Y2_31012020
+#LT=LT_1D_Y3_31012020
 
 ##Output directory with Limit Tree (LT) for 2D
 path=.
