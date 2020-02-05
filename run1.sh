@@ -8,10 +8,10 @@ indir17="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho
 indir18="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho_rew_2018_v2/"
 
 ##Output directory with Limit Tree (LT)
-path=/afs/cern.ch/work/i/ivovtin/Hggbb
+path=.
 LT=LT_2D_Y2_31012020
 
-out="$path/$LT_$method_Y$cat"
+out="$path/$LT"
 
 mkdir $out
 
