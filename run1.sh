@@ -7,7 +7,11 @@ indir16="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho
 indir17="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho_rew_2017_v2/"
 indir18="/afs/cern.ch/user/i/ivovtin/workarea/public/legacy_branch_flattrees/rho_rew_2018_v2/"
 
-##Output directory with Limit Tree (LT)
+##Output directory with Limit Tree (LT) for 1D
+#path=.
+#LT=LT_2D_Y2_31012020
+
+##Output directory with Limit Tree (LT) for 2D
 path=.
 LT=LT_2D_Y2_31012020
 
