@@ -77,7 +77,7 @@ The results of the limit will be put at `LIMS_OutDir/Node_SM/result_1.log`. You 
 
  7. Write the best functions to the file from the step 1 like here: [Envelopejson](https://github.com/ivovtin/bbggLimits2018/blob/run2_analysis/jsonsForEnvelope/Env_json_2D_ttHon0.26_31012020.dat) for each category at the column after order numbers. Use comma for separation.
 
- 8. Create new workspace with received functions:
+ 8. Update workspace with received functions:
 ```
 . run2.sh
 ```
