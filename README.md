@@ -68,7 +68,7 @@ The results of the limit will be put at `LIMS_OutDir/Node_SM/result_1.log`. You 
 
  4. Write the orders obtaing from the step 3 to the file from step 1. Example here: [Envelopejson](https://github.com/ivovtin/bbggLimits2018/blob/run2_analysis/jsonsForEnvelope/Env_json_2D_ttHon0.26_31012020.dat)
 
- 5. Create a new workspace with the received orders from FTest:
+ 5. Update workspace with the received orders from FTest:
 ```
 . run2.sh
 ```
