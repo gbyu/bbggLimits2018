@@ -44,7 +44,7 @@ The recommended option is Y = 2:
 
 ## 3. Performing fit and extraction of limits
 
- 1. Prepare a template file of the following structure: ([Envelopejson](https://github.com/ivovtin/bbggLimits2018/blob/run2_analysis/jsonsForEnvelope/Env_json_2D_ttHon0.26_31012020_emplty.dat)) for *mgg* and *mjj* proections without indicating of the best functions for each category. Put a link to the created files here: [link](https://github.com/ivovtin/bbggLimits2018/blob/227d17cf267e3520ee8f9830a2849ce370b34d54/runLimit.py#L300)
+ 1. Prepare a template file of the following structure: ([Envelopejson](https://github.com/ivovtin/bbggLimits2018/blob/run2_analysis/jsonsForEnvelope/Env_json_2D_ttHon0.26_31012020_emplty.dat)) for *mgg* and *mjj* proections without indicating of the best functions for each category. Put a link to the created files here: [link](https://github.com/ivovtin/bbggLimits2018/blob/8480c7351cfd4db16818f292bcc78c01bf567ba1/runLimit.py#L300)
 
  2. Create a workspace using the produced LTs:
 ```
