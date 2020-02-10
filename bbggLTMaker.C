@@ -99,6 +99,19 @@ Bool_t bbggLTMaker::Process(Long64_t entry)
   if (_normalization == 59.4) F_year=F_2018;
   if( _normalization!=1 && _genDiPhotonFilter==0) o_weight=o_weight*reweight/F_year;
   
+ /*
+  TString option = GetOption(); 
+  TObjArray *args = (TObjArray*)option.Tokenize(" "); 
+
+  if( _normalization==1 && ((string)((TObjString*)args->At(1))->GetString() == "LT_2D_Y2/2016/LT_DoubleEG.root") ) {o_weight=o_weight*2.9*35.9; 
+   if (o_evt<20) cout<<"(string)((TObjString*)args->At(1))->GetString()="<<(string)((TObjString*)args->At(1))->GetString()<<endl; 
+   if (o_evt<20) cout<<"o_weight="<<o_weight<<endl;
+  }
+  if( _normalization==1 && ((string)((TObjString*)args->At(1))->GetString() == "LT_2D_Y2/2017/LT_DoubleEG.root") ) o_weight=o_weight*2.9*41.5;
+  if( _normalization==1 && ((string)((TObjString*)args->At(1))->GetString() == "LT_2D_Y2/2018/LT_DoubleEG.root") ) o_weight=o_weight*2.9*59.4;
+  */
+	
+	
   //o_weight = 1;
   o_mgg = CMS_hgg_mass;
   o_mjj = Mjj;
