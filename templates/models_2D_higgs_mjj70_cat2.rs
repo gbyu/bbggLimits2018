@@ -62,26 +62,17 @@ mjj_hig_par1_vbf_cat2[0.1, 0, 10];
 mjj_hig_par2_vbf_cat2[0.1, 0, 10];
 mjj_hig_par3_vbf_cat2[0.1, 0, 10];
 
+mjj_hig_par1_bbh_cat2[0.1, 0, 10];
+mjj_hig_par2_bbh_cat2[0.1, 0, 10];
+mjj_hig_par3_bbh_cat2[0.1, 0, 10];
+
 mjj_hig_m0_tth_cat2[100, 70, 190];
 mjj_hig_sigma_tth_cat2[50, 10, 100];
-mjj_hig_alpha1_tth_cat2[1.0, 0.01, 10];
-mjj_hig_n1_tth_cat2[1, 0.01, 10];
-mjj_hig_alpha2_tth_cat2[1.0, 0.01, 10];
-mjj_hig_n2_tth_cat2[1, 0.01, 10];
-mjjHig_tth_cat2 = RooDoubleCB(mjj, mjj_hig_m0_tth_cat2, mjj_hig_sigma_tth_cat2, mjj_hig_alpha1_tth_cat2, mjj_hig_n1_tth_cat2, mjj_hig_alpha2_tth_cat2, mjj_hig_n2_tth_cat2);
+mjjHig_tth_cat2 = Gaussian(mjj, mjj_hig_m0_tth_cat2, mjj_hig_sigma_tth_cat2);
 
-mjj_hig_m0_vh_cat2[100, 70, 190];
-mjj_hig_sigma_vh_cat2[50, 10, 100];
-mjj_hig_alpha1_vh_cat2[1.0, 0.01, 10];
+mjj_hig_m0_vh_cat2[90, 70, 110];
+mjj_hig_sigma_vh_cat2[20, 10, 100];
+mjj_hig_alpha1_vh_cat2[-2.0, -10, -1];
 mjj_hig_n1_vh_cat2[1, 0.01, 10];
-mjj_hig_alpha2_vh_cat2[1.0, 0.01, 10];
-mjj_hig_n2_vh_cat2[1, 0.01, 10];
-mjjHig_vh_cat2 = RooDoubleCB(mjj, mjj_hig_m0_vh_cat2, mjj_hig_sigma_vh_cat2, mjj_hig_alpha1_vh_cat2, mjj_hig_n1_vh_cat2, mjj_hig_alpha2_vh_cat2, mjj_hig_n2_vh_cat2);
+mjjHig_vh_cat2 = CBShape(mjj, mjj_hig_m0_vh_cat2, mjj_hig_sigma_vh_cat2, mjj_hig_alpha1_vh_cat2, mjj_hig_n1_vh_cat2);
 
-mjj_hig_m0_bbh_cat2[100, 10, 180];
-mjj_hig_sigma_bbh_cat2[50, 1.0, 100];
-mjj_hig_alpha1_bbh_cat2[1.0, 0.01, 10];
-mjj_hig_n1_bbh_cat2[1, 0.01, 10];
-mjj_hig_alpha2_bbh_cat2[1.0, 0.01, 10];
-mjj_hig_n2_bbh_cat2[1, 0.01, 10];
-mjjHig_bbh_cat2 = RooDoubleCB(mjj, mjj_hig_m0_bbh_cat2, mjj_hig_sigma_bbh_cat2, mjj_hig_alpha1_bbh_cat2, mjj_hig_n1_bbh_cat2, mjj_hig_alpha2_bbh_cat2, mjj_hig_n2_bbh_cat2);

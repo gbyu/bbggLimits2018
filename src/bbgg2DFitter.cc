@@ -411,7 +411,7 @@ void bbgg2DFitter::HigModelFit(float mass, int higgschannel, TString higName)
 
       if (_fitStrategy==2){
 	
-	if(higName.Contains("ggh") == 1 || higName.Contains("vbf") == 1) {
+	if(higName.Contains("ggh") == 1 || higName.Contains("vbf") == 1 || higName.Contains("bbh") == 1) {
 	  mjjHig[c] = new RooBernstein(TString::Format("mjjHig_%s_cat%d",higName.Data(),c),"",*mjj,
 				       RooArgList( *_w->var( TString::Format("mjj_hig_par1_%s_cat%d", higName.Data(),c) ),
 						   *_w->var( TString::Format("mjj_hig_par2_%s_cat%d", higName.Data(),c) ),
@@ -627,7 +627,7 @@ void bbgg2DFitter::MakeHigWS(std::string fileHiggsName,int higgschannel, TString
 
       if(!_useDSCB) _w->factory(TString::Format("prod::CMS_hgg_gsigma_%s_cat%d(mgg_hig_gsigma_%s_cat%d, CMS_hgg_sig_sigmaScale)",
 						higName.Data(), c, higName.Data(), c));
-      if (higName.Contains("ggh") == 0 && higName.Contains("vbf") == 0 && _fitStrategy==2) {
+      if (higName.Contains("ggh") == 0 && higName.Contains("vbf") == 0 && higName.Contains("bbh") == 0 && _fitStrategy==2) {
         _w->factory(TString::Format("prod::CMS_hbb_hig_m0_%s_cat%d(mjj_hig_m0_%s_cat%d, CMS_hbb_sig_m0_absShift)", higName.Data(), c, higName.Data(), c));
         _w->factory(TString::Format("prod::CMS_hbb_hig_sigma_%s_cat%d(mjj_hig_sigma_%s_cat%d, CMS_hbb_sig_sigmaScale)", higName.Data(), c, higName.Data(), c));
         if(!_useDSCB) _w->factory(TString::Format("prod::CMS_hbb_hig_gsigma_%s_cat%d(mjj_hig_gsigma_%s_cat%d, CMS_hbb_sig_sigmaScale)", higName.Data(), c, higName.Data(), c));
@@ -637,7 +637,7 @@ void bbgg2DFitter::MakeHigWS(std::string fileHiggsName,int higgschannel, TString
       for (unsigned int iv = 0; iv < varsToChange.size(); iv++)
         EditPDF += TString::Format("%s=%s,", varsToChange[iv].first.Data(), varsToChange[iv].second.Data());
       //Shifted and smeared vars
-      if(higName.Contains("ggh") == 0 && higName.Contains("vbf") == 0 && _fitStrategy==2) {
+      if(higName.Contains("ggh") == 0 && higName.Contains("vbf") == 0 && higName.Contains("bbh") == 0 && _fitStrategy==2) {
         if(!_useDSCB) EditPDF += TString::Format("mjj_hig_gsigma_%s_cat%d=CMS_hbb_hig_gsigma_%s_cat%d,", higName.Data(), c, higName.Data(), c);
         EditPDF += TString::Format("mjj_hig_m0_%s_cat%d=CMS_hbb_hig_m0_%s_cat%d,", higName.Data(), c, higName.Data(), c);
         EditPDF += TString::Format("mjj_hig_sigma_%s_cat%d=CMS_hbb_hig_sigma_%s_cat%d,", higName.Data(), c, higName.Data(), c);
