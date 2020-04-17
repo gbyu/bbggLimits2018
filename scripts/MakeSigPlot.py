@@ -61,14 +61,14 @@ def main(argv):
 		print "Start" 
 #		data2D = workspace.data("Hig_vh_cat"+str(cat))
 #		data2D = workspace.data("Hig_vbf_cat"+str(cat))
-#		data2D = workspace.data("Hig_ggh_cat"+str(cat))
-		data2D = workspace.data("Hig_tth_cat"+str(cat))
+		data2D = workspace.data("Hig_ggh_cat"+str(cat))
+#		data2D = workspace.data("Hig_tth_cat"+str(cat))
 #		data2D = workspace.data("Hig_bbh_cat"+str(cat))
 		data2D.Print()
 #		pdf = workspace.pdf(ob+"Hig_vh_cat"+str(cat)+"_CMS_hig_vh_cat"+str(cat))
 #		pdf = workspace.pdf(ob+"Hig_vbf_cat"+str(cat)+"_CMS_hig_vbf_cat"+str(cat))
-#		pdf = workspace.pdf(ob+"Hig_ggh_cat"+str(cat)+"_CMS_hig_ggh_cat"+str(cat))
-		pdf = workspace.pdf(ob+"Hig_tth_cat"+str(cat)+"_CMS_hig_tth_cat"+str(cat))
+		pdf = workspace.pdf(ob+"Hig_ggh_cat"+str(cat)+"_CMS_hig_ggh_cat"+str(cat))
+#		pdf = workspace.pdf(ob+"Hig_tth_cat"+str(cat)+"_CMS_hig_tth_cat"+str(cat))
 #		pdf = workspace.pdf(ob+"Hig_bbh_cat"+str(cat)+"_CMS_hig_bbh_cat"+str(cat))
 		print ob+"Sig_cat"+str(cat)+"_CMS_sig_cat"+str(cat)
 		pdf.Print()
@@ -80,10 +80,10 @@ def main(argv):
 		label = "m_{jj} [GeV]"
 		if 'mgg' in ob:
 			label = "m_{#gamma#gamma} [GeV]"
-#		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_ggh_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)	
-		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_tth_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
-#		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_vbf_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
 #		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_vh_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
+#		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_vbf_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
+		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_ggh_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)	
+#		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_tth_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
 #		MakeSigPlot(data, pdf, var, label, lumi, cat, analysis, doBands, Label+"_Hig_bbh_fit_"+ob+"_cat"+str(cat), bins[i], xmin[ob], xmax[ob], outpath)
 
 if __name__ == "__main__":
